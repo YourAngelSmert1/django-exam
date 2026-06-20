@@ -457,3 +457,33 @@ event.title и т.д.).
 3. В views.py создайте аналогичные представления, заменив
 Product на Event.
 4. В urls.py добавьте маршруты для новой модели
+
+
+форматирование:
+
+## Практическое занятие 3. Добавляем собственный веб-интерфейс
+
+**Цель:** Создать свой веб-интерфейс для работы с товарами (список, добавление, редактирование, удаление). Дает дополнительные 20 баллов.
+
+### Шаг 1. Создаём папку для шаблонов
+В приложении `products` создайте папку `templates`, а внутри неё – папку `products`.  
+Полный путь: `products/templates/products/`
+
+### Шаг 2. Создаём общий базовый шаблон base.html
+В папке `products/templates/products/` создайте файл `base.html`:
+
+```html
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Управление товарами{% endblock %}</title>
+    <link href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css)" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
