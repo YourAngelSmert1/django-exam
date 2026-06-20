@@ -482,6 +482,9 @@ Product на Event.
     <link href="[https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css](https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css)" rel="stylesheet">
 </head>
 <body>
+
+```
+вот теперь конец
     <div class="container mt-4">
         {% block content %}{% endblock %}
     </div>
